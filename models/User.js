@@ -1,7 +1,7 @@
 const { Schema, model, Types } = require('mongoose');
 const thoughtSchema = require('./Thought');
 
-// Schema create User
+
 const userSchema = new Schema(
   {
     username: {
@@ -14,7 +14,7 @@ const userSchema = new Schema(
       type: String,
       required: true,
       unique: true,
-      match: [/.+@.+\..+/],
+      match: [/.+@.+\..+/, "The entered email was invalid, please enter valid"],
     },
     thoughts: [
         {
