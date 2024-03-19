@@ -7,8 +7,7 @@ getAllThoughts(req, res) {
     Thought.find().then((thought) => res.json(thought)).catch((err) => res.status(500).json(err));
 
 },
-// get one thought by it's id
-// create thought to a user
+
 createThought(req, res) {
    Thought.create(req.body)
    .then((dbThoughtData) => {
@@ -23,7 +22,7 @@ createThought(req, res) {
    .then(userData => res.json(userData))
    .catch((err) => res.status(500).json(err));
 },
-//update thought by it's id
+//update thought 
 updateThought(req, res) {
     Thought.findOneAndUpdate({
         _id: req.params.id
@@ -40,11 +39,10 @@ updateThought(req, res) {
 
 },
 
-//   getThoughtById
+//   ThoughtById
 getThoughtById({ params }, res) {
     Thought.findOne({ _id: params.id })
       .then((dbThoughtData) => {
-        // if no thought is found
         if (!dbThoughtData) {
           res.status(404).json({ message: "No thought with this ID" });
           return;
@@ -57,7 +55,7 @@ getThoughtById({ params }, res) {
       });
   },
 
-// delete a thought
+// delete thought
 deleteThought(req, res) {
     Thought.findOneAndDelete({_id: req.params.id})
     .then((thought) => {
