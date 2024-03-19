@@ -1,7 +1,7 @@
 const { Schema, model, Types } = require('mongoose');
 const thoughtSchema = require('./Thought');
 
-//  Used for user model creation
+// Schema create User
 const userSchema = new Schema(
   {
     username: {
@@ -14,7 +14,7 @@ const userSchema = new Schema(
       type: String,
       required: true,
       unique: true,
-      match: [/.+@.+\..+/, "You entered a invalid email, Please try again"],
+      match: [/.+@.+\..+/],
     },
     thoughts: [
         {
@@ -36,10 +36,6 @@ const userSchema = new Schema(
     id: false,
   }
 );
-
-
-
-// Creates `friendCount` that retrieves 'friends' array 
 
 userSchema.virtual('friendCount').get(function(){
     return this.friends.length;
