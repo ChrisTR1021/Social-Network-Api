@@ -5,11 +5,11 @@
 This project is for a social network application that allows users to interact, comment and add and delete friends. ongoDB serves as an excellent choice for storing data, offering flexibility and scalability, while Mongoose simplifies interaction with MongoDB by providing a schema-based solution and other helpful features. Incorporating Moment.js for date formatting enhances the user experience by ensuring consistent and user-friendly display of timestamps across the application.
 
 ## Table of Contents
-- [Installation]
-- [License]
-- [Task]
-- [Test]
-- [Questions]
+- [Installation](https://github.com/ChrisTR1021/Social-Network-Api#installation)
+- [License](https://github.com/ChrisTR1021/Social-Network-Api#license)
+- [Task](https://github.com/ChrisTR1021/Social-Network-Api#task)
+- [Test](https://github.com/ChrisTR1021/Social-Network-Api#test)
+- [Questions](https://github.com/ChrisTR1021/Social-Network-Api#questions)
 
 ## Installation 
 MongoDb is necessary for the application to work. Run pnpm i and npm i 
